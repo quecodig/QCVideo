@@ -16,22 +16,22 @@ $ (document) .ready (function () {
 	});
 });
 ```
-* <strong> Mod: </strong>
+<strong> Mod: </strong>
 
 - 'embed' in full screen.
 - 'video' is inserted directly.
 
-* <strong> Above: </strong>
+<strong> Above: </strong>
 
 - 'complete' or 'title' The title of the video is shown
 - 'share' or 'null' only shows sharing
 
-* <strong> Topic: </strong>
+<strong> Topic: </strong>
 
 - 'QCTheme'
 - 'MowantTheme'
 
-* <strong> CDN: </strong> Where the files are located, both for the url in embedded mode and for general files
+<strong> CDN: </strong> Where the files are located, both for the url in embedded mode and for general files
 
 ```html
 <div id = "video" data = "QCVideo" data-src = "https://www.quecodigo.com/video/ejemplo.mp4" data-width = "640" data-height = "360" data-poster = "https://www.quecodigo.com/video/img/video.jpg?2" data-title = "www.quecodigo.com - QCVideo Plugin"> </ div>
