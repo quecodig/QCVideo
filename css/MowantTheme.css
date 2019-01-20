@@ -1,0 +1,334 @@
+/*
+	@Author: QueCódigo
+	@Page: www.quecodigo.com
+	@Theme: MowantThme
+*/
+@font-face{
+	font-family:screen;
+	src:url(https://platform.s-mdstrm.com/player/-/assets/screen/screen.eot);
+	src:url(https://platform.s-mdstrm.com/player/-/assets/screen/screen.eot?#iefix) format('embedded-opentype'),
+	url(https://platform.s-mdstrm.com/player/-/assets/screen/screen.woff) format('woff'),
+	url(https://platform.s-mdstrm.com/player/-/assets/screen/screen.ttf) format('truetype'),
+	url(https://platform.s-mdstrm.com/player/-/assets/screen/screen.svg#icomoon) format('svg');
+	font-weight:400;
+	font-style: initial !important;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.qc-icon{
+	font-style: initial !important;
+	cursor: pointer;
+}
+#content-video  .mejs-overlay-play { cursor: pointer !important; }
+#content-video .mejs-overlay-play a{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+	-moz-transition: all .1s cubic-bezier(0.4,0.0,1,1);
+	-webkit-transition: all .1s cubic-bezier(0.4,0.0,1,1);
+	transition: all .1s cubic-bezier(0.4,0.0,1,1);
+	color: inherit;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	-ms-transition: all .5s;
+	transition: all .5s;
+	cursor: pointer;
+}
+#content-video .mejs-overlay-play a button{
+	-moz-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+	-webkit-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+	transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+	outline: 0;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	color: inherit;
+	text-align: inherit;
+	cursor: pointer;
+}
+#content-video .mejs-overlay-play a button svg{
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 18px 0 18px 31.2px;
+	border-color: transparent transparent transparent #fff;
+	margin-top: 0;
+	margin-left: -15.5px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+#content-video .mejs-overlay-play a button svg:before{
+	content: "";
+}
+#content-video > .top-gradient{
+	top: 0;
+	z-index: 21;
+	background-position: top;
+	height: 98px;
+	width: 100%;
+	position: absolute;
+	background-repeat: repeat-x;
+	background-image: url("../img/bg-gradient.png");
+	-moz-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+	-webkit-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+	transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+	pointer-events: none;
+}
+#content-video > .top{
+	top: 0;
+	margin-left: 35px;
+	margin-right: 35px;
+	margin-top: 10px;
+	border-radius: 2px;
+	z-index: 100;
+	position: absolute;
+	right: 0;
+	left: 0;
+	background-color: rgba(7,20,30,.8);
+	list-style-type: none;
+}
+#content-video > .top > .title > .text{
+	font-family: Arial,Helvetica;
+	color: #fff;
+	font-size: .8em;
+	font-weight: 400;
+	line-height: 2.2em;
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 5px;
+	float: left;
+	list-style-type: none;
+}
+#content-video > .top > .title > .text > a{
+	color: inherit;
+	text-decoration: none;
+	outline: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	word-wrap: normal;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	float: left;
+	padding-left: 4px;
+}
+
+#content-video > .menu{
+	bottom: 0;
+	margin: 0 35px 10px;
+	z-index: 99999999;
+	border-radius: 2px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	background-color: rgba(7,20,30,.8);
+	list-style-type: none;
+}
+#content-video > .menu > .progress{
+	font-family: screen;
+	display: block;
+	background-color: rgba(78,78,78,.8);
+	width: 100%;
+	height: 8px;
+	list-style-type: none;
+	cursor: pointer;
+}
+#content-video > .menu > .progress > .progress-bar > .progress-list > .scrubber > .progress{
+	background-color: #bfd62e;
+	width: 0;
+	height: 100%;
+	display: block;
+	position: relative;
+	float: left;
+	font-family: screen;
+	cursor: pointer;
+}
+#content-video > .menu > .progress > .progress-bar > .progress-list > .scrubber > .progress > .scrom-slide{
+	display: block;
+	position: absolute;
+	background-color: #a9aaab;
+	border: 2px solid #fff;
+	border-radius: 8px;
+	width: 5px;
+	height: 5px;
+	right: -4px;
+	top: 0;
+	z-index: 10000;
+	-moz-transform: scale(1.6,1.6);
+	-webkit-transform: scale(1.6,1.6);
+	-o-transform: scale(1.6,1.6);
+	-ms-transform: scale(1.6,1.6);
+	transform: scale(1.6,1.6);
+	font-family: screen;
+	display: none;
+}
+#content-video > .menu > .progress > .progress-bar > .progress-list > .scrubber > .loaded{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 7px;
+	width: 0px;
+	background: #000 none repeat scroll 0% 0%;
+	background: rgba(255,255,255,.4);
+}
+#content-video > .menu > .controls > .left{
+	float: left;
+	height: 100%;
+}
+#content-video > .menu > .controls > .right{
+	float: right;
+	height: 100%;
+}
+#content-video > .menu > .controls > .left > a,
+#content-video > .menu > .controls > .right > a{
+	color: #FFF;
+	text-decoration: none;
+	display: inline-block;
+}
+#content-video > .menu > .controls > .left > a#boton_player{
+	font-family: screen;
+	display: inline-block;
+	width: 60px;
+	height: 40px;
+	line-height: 1.9em;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	font-size: 1.3em;
+	float: left;
+	text-decoration: none;
+	list-style-type: none;
+}
+#content-video > .menu > .controls > .left > a#boton_player > i.qc-play:before{
+	content: "\e001";
+}
+#content-video > .menu > .controls > .left > a#boton_player > i.qc-pause:before{
+	content: "\e002";
+}
+#content-video > .menu > .controls > .left > a#boton_player > i.qc-replay:before{
+	content: "\e901";
+}
+#content-video > .menu > .controls > .left > a.volume{
+	font-family: screen;
+	display: inline-block;
+	float: left;
+	height: 40px;
+	vertical-align: middle;
+	line-height: 1.9em;
+	text-align: center;
+	font-size: 1.3em;
+}
+#content-video > .menu > .controls > .left > a.volume > i{
+	font-family: screen;
+	line-height: 1.5em;
+	font-size: 1.3em;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	width: 25px;
+	color: #fff;
+	text-decoration: none;
+}
+#content-video > .menu > .controls > .left > a.volume > i:before{
+	content: "\e006";
+}
+#content-video > .menu > .controls > .left > a.volume > .slider{
+	font-family: screen;
+	display: inline-block;
+	background-color: rgba(78,78,78,.8);
+	width: 50px;
+	height: 5px;
+	margin-bottom: 9px;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	text-align: left;
+}
+#content-video > .menu > .controls > .left > a.volume > .slider > .knob{
+	background-color: #bfd62e;
+	float: left;
+	width: 0;
+	height: 5px;
+	-webkit-transition: width .1s;
+	-moz-transition: width .1s;
+	-ms-transition: width .1s;
+	-o-transition: width .1s;
+	transition: width .1s;
+}
+#content-video > .menu > .controls > .left > .duration{
+	font-family: Arial,Helvetica;
+	display: inline-block;
+	font-size: .7em;
+	color: #78787a;
+	vertical-align: middle;
+	line-height: 3.5em;
+	float: left;
+	text-decoration: none;
+}
+#content-video > .menu > .controls > .left > .duration > span{
+	color: #fff;
+}
+#content-video > .menu > .controls > .right > a#cog{
+	font-family: screen;
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: 1.8em;
+	display: inline-block;
+	float: left;
+	margin-left: 5px;
+	margin-right: 10px;
+}
+#content-video > .menu > .controls > .right > a#cog{
+	font-size: 100%;
+	color: #FFF;
+	text-decoration: none;
+	font-family: screen;
+	font-size: 1.2em;
+	color: #fff;
+	line-height: 2.2em;
+	cursor: pointer;
+}
+#content-video > .menu > .controls > .right > a#cog > i:before{
+	content: "\e00c";
+}
+#content-video > .menu > .controls > .right > a#completa > i{
+	font-family: screen;
+	font-size: 1.3em;
+	color: #fff;
+	line-height: 1.9em;
+	display: inline-block;
+	text-align: center;
+	float: right;
+	text-decoration: none;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+}
+#content-video > .menu > .controls > .right > a#completa > i:before{
+	content: "\e000";
+}
+
+/*----Shared Info--------*/
+#content-video > .share-info{
+	display: none;
+}
+@media only screen and (max-width: 377px){
+	#content-video > .menu{
+		width: 100%;
+		margin: 0;
+	}
+	#content-video > .menu > .controls > .left > a.volume{
+		display: none;
+	}
+}
